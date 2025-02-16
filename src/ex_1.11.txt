@@ -1,0 +1,1 @@
+Probably try to enter lines with words of unit length. You can also place all types of separator characters between words at once. You can enter a line in principle without words, or in principle without spaces, one word entirely.
