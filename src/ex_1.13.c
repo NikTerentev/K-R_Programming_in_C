@@ -32,15 +32,36 @@ main() {
     }
   }
 
-  printf("Horizontal Hystogram:\nWord length   Words count\n");
-  printf("             0 1 2 3 4 5 6 7 8 9 10\n");
-  for (i = 1; i < MAX_WORD_LENGTH + 1; i++) {
+  printf("Horizontal Hystogram:\nWords length   Words count\n");
+  printf("             ");
+  for (i = 0; i <= 10; i++)
+    printf("%d ", i);
+  printf("\n");
+
+  int y;
+
+  for (i = 1; i <= MAX_WORD_LENGTH; i++) {
     printf("%11d   ", i);
-    int y;
     for (y = 0; y < wLengths[i]; y++)
       printf("■■");
     printf("\n");
   }
 
-  /* TODO: Add vertical hystogram output */
+  printf("\nVertical Hystogram:\n");
+
+  printf("Words count\n");
+  for (i = 10; i >= 1; i--) {
+    printf("%6d  ", i);
+    for (y = 1; y <= MAX_WORD_LENGTH; y++) {
+      if (wLengths[y] >= i)
+        printf("■  ");
+      else
+        printf("   ");
+    }
+    printf("\n");
+  }
+  printf("    ");
+  for (i = 0; i <= MAX_WORD_LENGTH; i++)
+    printf("%2d ", i);
+  printf("Words length\n");
 }
