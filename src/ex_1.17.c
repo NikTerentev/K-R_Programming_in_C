@@ -2,6 +2,18 @@
 
 #define ROW_LEN 10
 
+int getlinenew(char s[], int lim);
+
+
+int main() {
+    int c, i, len;
+    char line[ROW_LEN + 1];
+
+    while (getlinenew(line, ROW_LEN) != 0);
+
+    return 0;
+}
+
 int getlinenew(char s[], int lim) {
     int c, i;
     for (i = 0; i <= lim && (c=getchar()) != EOF && c != '\n'; ++i) {
@@ -26,14 +38,4 @@ int getlinenew(char s[], int lim) {
     printf("%c", c);
 
     return 1;
-}
-
-
-int main() {
-    int c, i, len;
-    char line[ROW_LEN + 1];
-
-    while (getlinenew(line, ROW_LEN) != 0);
-
-    return 0;
 }
